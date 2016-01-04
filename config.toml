@@ -1,0 +1,11 @@
+baseurl = "http://leemorris.co.uk"
+languageCode = "en-gb"
+title = "Lee Morris"
+
+paginate = 10
+theme = "purehugo"
+
+[params]
+    name = "Lee Morris"
+    description = "A braindump"
+    githubName = "leemorrisdev"
