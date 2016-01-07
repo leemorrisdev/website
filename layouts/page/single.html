@@ -7,9 +7,6 @@
         <div>
             <!-- A wrapper for all the blog posts -->
             <div class="posts">
-				{{ $paginator := .Paginate (where .Data.Pages "Type" "post") }}
-                {{ range $paginator.Pages }}
-                <h1 class="content-subhead">{{ .Date.Format "02 Jan 2006, 15:04" }}</h1>
                 <section class="post">
                     <header class="post-header">
 
@@ -28,12 +25,16 @@
                     </header>
 
                     <div class="post-description">
-                        {{ .Content }}
+                        <div class="pure-u-1-3">
+                            {{ .Content }}
+                        </div>
+                        <div class="pure-u-1-3">
+                            <img src="{{ .Site.BaseURL }}/img/lee_rio.jpg" />
+                        </div>
                     </div>
+                    {{ template "_internal/disqus.html" . }}
                 </section>
-                {{ end }}
             </div>
-            {{ partial "pagination.html" . }}
             {{ partial "footer.html" . }}
         </div>
     </div>
