@@ -9,6 +9,8 @@ I've been enjoying [JDBI](http://jdbi.org/) whilst working with [Dropwizard](htt
 
 On the whole it's been a positive experience, but I ran into an issue today that had be scratching my head for a short while.
 
+**tl;dr - JDBI won't give you the full resultset when using a join if your API return type is not a collection.  To work around it, you need to fetch a collection and get the first result.**
+
 Assume I have the following tables (columns removed for brevity):
 
     oms_order
