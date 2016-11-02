@@ -3,7 +3,7 @@ languageCode = "en-gb"
 title = "Lee Morris"
 
 paginate = 10
-theme = "hugo-cactus-theme"
+theme = "cactus-theme"
 
 [params]
     name = "Lee Morris"
