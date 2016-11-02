@@ -3,11 +3,13 @@ languageCode = "en-gb"
 title = "Lee Morris"
 
 paginate = 10
-theme = "purehugo"
+theme = "hugo-cactus-theme"
 
 [params]
     name = "Lee Morris"
-    description = "A braindump"
-    githubName = "leemorrisdev"
-    twitterName = "apparentlylee"
-    google_analytics = "UA-42836201-1"
+    description = "Software Engineer, Bucks UK"
+    bio = "Software Developer, Bucks UK"
+    enableRSS = true
+    github = "leemorrisdev"
+    ga_api_key = "UA-42836201-1"
+    avatar = "../../static/img/avatar.png"
