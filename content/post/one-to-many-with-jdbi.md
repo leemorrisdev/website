@@ -131,6 +131,6 @@ I'm not sure of the reasons behind this, I expected that my mapper would be pres
     
     @SqlQuery("select o.*, t.id as 'trade_id', t.quantity as 'trade_quantity', t.price as 'trade_price', t.timestamp as 'trade_ts' " +
               " from oms_order o left outer join oms_trade t on o.id = t.order_id where o.id = :id")
-    public abstract Order findOne(@Bind("id") Long id);
+    public abstract List<Order> findOne(@Bind("id") Long id);
     
 In this case the API still shows findById but delegates the actual work to findOne.  It's *not* a nice solution, but it works for now until I can figure out why JDBI doesn't support this out of the box.
